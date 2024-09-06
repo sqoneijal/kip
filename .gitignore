@@ -1,0 +1,8 @@
+node_modules
+app/Config/Database.php
+vendor
+.vscode
+public/bundle
+public/assets/mahasiswa
+public/upload
+writable

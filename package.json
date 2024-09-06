@@ -1,0 +1,47 @@
+{
+   "name": "kip",
+   "version": "1.0.0",
+   "description": "",
+   "main": "webpack.config.js",
+   "scripts": {
+      "dev": "webpack serve --env NODE_ENV=development --env PAGE=dev --mode development",
+      "build": "webpack --env NODE_ENV=production --env PAGE=build --mode production",
+      "dev-mahasiswa": "esbuild --define:process.env.NODE_ENV=\\\"development\\\" ./src/mahasiswa/App.jsx --bundle --watch --serve=8081 --alias:~=./src --outdir=./public/bundle/mahasiswa --loader:.svg=copy --loader:.eot=copy --loader:.png=dataurl --loader:.jpg=copy --loader:.woff=copy --loader:.woff2=copy --loader:.ttf=copy --sourcemap --log-limit=0  --loader=jsx",
+      "build-mahasiswa": "rm -rf ./assets/mahasiswa && ./esbuild.config.js && ./build.sh"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@babel/plugin-transform-runtime": "^7.22.6",
+      "@babel/preset-env": "^7.22.6",
+      "@babel/preset-react": "^7.22.5",
+      "@reduxjs/toolkit": "^1.9.5",
+      "axios": "^1.4.0",
+      "babel-loader": "^9.1.2",
+      "clean-webpack-plugin": "^4.0.0",
+      "css-minimizer-webpack-plugin": "^5.0.1",
+      "datatables.net": "^1.13.5",
+      "datatables.net-bs4": "^1.13.5",
+      "datatables.net-responsive": "^2.5.0",
+      "html-webpack-plugin": "^5.5.3",
+      "lozad": "^1.16.0",
+      "mini-css-extract-plugin": "^2.7.6",
+      "moment": "^2.29.4",
+      "react": "^18.2.0",
+      "react-bootstrap": "^2.8.0",
+      "react-dom": "^18.2.0",
+      "react-redux": "^8.1.1",
+      "react-router-dom": "^6.14.1",
+      "sweetalert2": "^11.7.12",
+      "toastr": "^2.1.4",
+      "webpack": "^5.88.1",
+      "webpack-cli": "^5.1.4",
+      "webpack-dev-server": "^4.15.1",
+      "webpack-manifest-plugin": "^5.0.0",
+      "write-excel-file": "^1.4.27"
+   },
+   "devDependencies": {
+      "esbuild": "0.23.1"
+   }
+}
